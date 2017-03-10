@@ -27,3 +27,13 @@ $ cd ansible-rbenv/dev
 $ vagrant up
 
 ```
+
+```
+$ vagrant ssh
+[vagrant@localhost ~]$ cd /vagrant/
+[vagrant@localhost ~]$ rbenv exec bundle install --path vendor/bundle
+[vagrant@localhost ~]$ rbenv exec rake db:setup
+[vagrant@localhost ~]$ rbenv exec rails s -b 0.0.0.0
+```
+
+The development rails server should be up and running. Bring up the browser and access to the url: 'http://localhost:3000/'.
